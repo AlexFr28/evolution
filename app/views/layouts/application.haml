@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Evolution
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.png'
+    
+  %body
+    = render 'layouts/navigation'
+    = render 'layouts/notice'
+
+    = yield
+
+    :javascript
+      $('.alert').delay(4000).fadeOut();
