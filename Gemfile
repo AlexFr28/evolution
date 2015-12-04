@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'haml'
+gem 'pry'
+
+# Bootstrap in sass
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

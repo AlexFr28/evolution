@@ -1,0 +1,25 @@
+%header.navbar
+  .container-fluid
+
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      = link_to "Evolution", root_path, class: "navbar-brand"
+      %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        - if current_user != nil
+          %span MENU
+
+    / Collect the nav links, forms, and other content for toggling
+    #navbar-collapse.collapse.navbar-collapse
+      
+      - if current_user != nil
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+              = current_user.nickname
+              %span.caret
+            %ul.dropdown-menu
+              %li
+                = link_to "Mon profil", user_path(current_user.id)
+              %li.divider{:role => "separator"}
+              %li
+                = link_to "Déconnexion", destroy_user_session_path, method: :delete
