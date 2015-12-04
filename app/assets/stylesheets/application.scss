@@ -18,7 +18,7 @@
 
 .navbar
 {
-  background-color: #009688;
+  background-color: $navbar-color;
   color: white;
   .navbar-brand
   {
@@ -26,21 +26,25 @@
   }
   #navbar-collapse
   { 
-    background-color: $navbar-color;
+    background-color: $navbar-color-submenu;
     .dropdown-toggle
     {
-      background-color: $navbar-color;
+      background-color: $navbar-color-submenu;
       color: white;
     }
     .dropdown-menu
     {
       a
       {
-        background-color: $navbar-color;
+        background-color: $navbar-color-submenu;
         &:hover
         {
-          background-color: lighten($navbar-color,10%);
+          background-color: lighten($navbar-color-submenu,10%);
         }
+      }
+      .divider
+      {
+        background-color: $navbar-color-submenu;
       }
     }
   }
