@@ -15,11 +15,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "variables";
+@import "tiles";
+
+body
+{
+  background-color: $body-color;
+}
 
 .navbar
 {
   background-color: $navbar-color;
   color: white;
+  border-radius: 0;
   .navbar-brand
   {
     color: white;
