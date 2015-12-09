@@ -1,0 +1,5 @@
+.grid.row
+  = link_to image_tag("more.png", alt: 'icone plus'), 'root_path', class: "button_more", title: "Créer un bilan"
+  .submenu
+    - @items_moneys.each do |item_money|
+      = link_to item_money.name, item_money.link.to_sym, class: 'sub'

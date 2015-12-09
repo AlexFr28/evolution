@@ -1,0 +1,36 @@
+// Place all the styles related to the ItemsMoneys controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.grid
+{
+  .button_more
+  {
+    @include make-xs-column(1);
+    @include make-sm-column(1);
+    @include make-md-column(1);
+    @include make-lg-column(1);
+    margin-left: 10px;
+  }
+
+  .submenu
+  {    
+    @include make-xs-column(4);
+    @include make-sm-column(4);
+    @include make-md-column(4);
+    @include make-lg-column(4);
+    
+    position: relative;
+    float: right;
+    background-color: $tile-color;
+    font-size: 20px;
+    margin-right: 25px;
+    text-align: center;
+    
+    .sub
+    {
+      color: white;
+    }
+  }
+
+}

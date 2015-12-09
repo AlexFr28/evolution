@@ -1,6 +1,6 @@
 .tiles.row
   - @tiles.each do |tile|
-    .tile.col-lg-2
+    .tile
       / # = link_to image_tag('cross.png', alt: 'supprimer'), tile.link.to_sym, title: 'Supprimer ce thème', class: 'button_cross'
       = link_to image_tag(tile.image, alt: tile.name), tile.link.to_sym
       / %img{src: "http://placehold.it/600x600", class: "img-responsive"}
