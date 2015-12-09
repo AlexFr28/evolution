@@ -5,15 +5,19 @@
 .tiles
 {
   margin: 5px;
+
   .tile
   {
     @include make-xs-column(6);
     @include make-sm-column(4);
     @include make-md-column(3);
     @include make-lg-column(2);
+    
     text-align: center;
     background-color: $tile-color;
     border: 10px solid $body-color;
     border-radius: 15px;
+
   }
+
 }
