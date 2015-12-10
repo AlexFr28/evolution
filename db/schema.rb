@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209103035) do
+ActiveRecord::Schema.define(version: 20151210120327) do
 
   create_table "item_moneys", force: :cascade do |t|
     t.string   "name",       null: false
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(version: 20151209103035) do
     t.string   "link",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "operators", force: :cascade do |t|
+    t.string   "symbol",     default: "+"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "tiles", force: :cascade do |t|
