@@ -1,0 +1,15 @@
+.new
+  .panel
+    .panel-heading
+      .panel-title
+        %h1 Création d'un compte
+    .panel-body
+      = form_for @account do |f|
+        %ul.list-inline
+          %li= f.label 'Nom :'
+          %li= f.text_field :name
+        %ul.list-inline
+          %li= f.label 'Symbole'
+          %li= f.collection_select :operator_id, @operators, :id, :symbol
+        %ul.list-inline
+          %li.validated= f.submit 'Enregistrer'

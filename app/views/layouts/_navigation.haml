@@ -22,3 +22,5 @@
             %li.divider{:role => "separator"}
             %li
               = link_to "Déconnexion", destroy_user_session_path, method: :delete
+        %li
+          = link_to "Gestion", accounts_path, method: :get

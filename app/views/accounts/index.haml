@@ -1,0 +1,13 @@
+.index
+  .panel
+    .panel-heading
+      .panel-title
+        %h1 Liste des comptes
+        .more= link_to '', new_account_path, method: :get, class: 'glyphicon glyphicon-plus white'
+    .panel-body
+      - @accounts.each do |account|
+        %ul.list-inline
+          %li= account.name
+          %li.line
+          %li.line= link_to '', account_path(account.id), method: :delete, class: 'glyphicon glyphicon-remove', data: { confirm: "Voulez-vous vraiment supprimer le compte \"#{account.name}\" ?", commit: 'test'}
+          %li.line= link_to '', edit_account_path(account.id), method: :get, class: 'glyphicon glyphicon-edit'

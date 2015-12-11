@@ -1,0 +1,93 @@
+// Place all the styles related to the accounts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+.index
+{
+  .panel
+  {
+    @include make-xs-column(12);
+    @include make-sm-column(11);
+    @include make-md-column(11);
+    @include make-lg-column(11);
+    font-size: 2rem;
+
+    .panel-heading
+    {
+      background-color: $tile-color;
+      color: white;
+
+      .panel-title
+      {
+        text-align: center;
+
+        h1
+        {
+          font-size: 2.5rem;
+          display: inline-block;
+        }
+
+        .more
+        {
+          float: right;
+          display: inline-block;
+
+          .white
+          {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .panel-body
+    {
+      background-color: lighten($tile-color, 25%);
+
+      .line
+      {
+        float: right;
+      }
+    }
+  }
+}
+
+.new
+{
+  .panel
+  {
+    @include make-xs-column(12);
+    @include make-sm-column(11);
+    @include make-md-column(11);
+    @include make-lg-column(11);
+    font-size: 2rem;
+
+    .panel-heading
+    {
+      background-color: $tile-color;
+      color: white;
+
+      .panel-title
+      {
+        text-align: center;
+
+        h1
+        {
+          font-size: 2.5rem;
+          display: inline-block;
+        }
+      }
+    }
+
+    .panel-body
+    {
+      background-color: lighten($tile-color, 25%);
+
+      .validated
+      {
+        float: right;
+        color: black;
+      }
+    }
+  }
+}
