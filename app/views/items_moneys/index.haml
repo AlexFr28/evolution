@@ -1,5 +1,20 @@
-.grid.row
-  = link_to image_tag("more.png", alt: 'icone plus'), 'root_path', class: "button_more", title: "Créer un bilan"
-  .submenu
-    - @items_moneys.each do |item_money|
-      = link_to item_money.name, item_money.link.to_sym, class: 'sub'
+.index-item-money
+  .grid.row
+    = link_to image_tag("more.png", alt: 'icone plus'), new_statement_path, class: "button_more", title: "Créer un bilan"
+    .submenu
+      - @items_moneys.each do |item_money|
+        = link_to item_money.name, item_money.link.to_sym, class: 'sub'
+  %br
+  .statements
+    .panel
+      .panel-heading
+        .panel-title
+          %h1 Mes derniers bilans
+      .panel-body
+        - @bilans.keys.each do |key|
+          .block
+            .statement= link_to key, root_path
+            .value= "%.2f€" % @bilans[key]
+
+  / = line_chart @bilans
+  

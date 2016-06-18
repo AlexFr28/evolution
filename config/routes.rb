@@ -2,10 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  root 'tiles#index'
+
   resources :users, only: [:index, :show]
   resources :items_moneys, only: [:index]
   resources :accounts, except: [:show]
-  # resources :users, except: [:new, :create, :destroy]
-  root 'tiles#index'
+  resources :statements, only: [:new, :create]
 
 end

@@ -1,0 +1,17 @@
+.new-statements
+  .panel
+    .panel-heading
+      .panel-title
+        %h1 Nouveau relevé
+    .panel-body
+      = form_tag '/statements' do
+        Date du relevé :
+        = text_field_tag 'date'
+        %br
+        - @accounts.each do |account|
+          .row
+            .col-xs-6
+              = account.name
+            .col-xs-6
+              = number_field_tag account.name, step: 0.01
+        = submit_tag 'Valider le relevé'

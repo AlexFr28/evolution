@@ -2,35 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.grid
+.index-item-money
 {
-  .button_more
+  .grid
   {
-    @include make-xs-column(1);
-    @include make-sm-column(1);
-    @include make-md-column(1);
-    @include make-lg-column(1);
-    margin-left: 10px;
-  }
-
-  .submenu
-  {    
-    @include make-xs-column(4);
-    @include make-sm-column(4);
-    @include make-md-column(4);
-    @include make-lg-column(4);
-    
-    position: relative;
-    float: right;
-    background-color: $tile-color;
-    font-size: 20px;
-    margin-right: 25px;
-    text-align: center;
-    
-    .sub
+    .button_more
     {
-      color: white;
+      @include make-xs-column(1);
+      @include make-sm-column(1);
+      @include make-md-column(1);
+      @include make-lg-column(1);
+      margin-left: 10px;
+    }
+
+    .submenu
+    {    
+      @include make-xs-column(4);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @include make-lg-column(4);
+      
+      position: relative;
+      float: right;
+      background-color: $tile-color;
+      font-size: 20px;
+      margin-right: 25px;
+      text-align: center;
+
+      .sub
+      {
+        color: white;
+        display: block;
+      }
     }
   }
 
+  .statements
+  {
+
+    .panel
+    {
+      @include make-xs-column(12);
+      @include make-sm-column(11);
+      @include make-md-column(11);
+      @include make-lg-column(11);
+      font-size: 1.2rem;
+
+      .panel-heading
+      {
+        background-color: $tile-color;
+        color: white;
+
+        .panel-title
+        {
+          text-align: center;
+
+          h1
+          {
+            font-size: 2.5rem;
+            display: inline-block;
+          }
+        }
+      }
+
+      .panel-body
+      {
+        background-color: lighten($tile-color, 25%);
+        font-size: 1.5rem;
+
+        .block
+        {
+          display: block;
+
+          .statement
+          {
+            display: inline;
+          }
+
+          .value
+          {
+            display: inline;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
 }
