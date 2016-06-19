@@ -15,5 +15,10 @@ class StatementsController < ApplicationController
     end
     redirect_to '/items_moneys'
   end
+
+  def show
+    @date = params[:id]
+    @statements = Statement.where(date: @date)
+  end
   
 end

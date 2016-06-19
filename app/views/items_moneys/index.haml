@@ -11,10 +11,10 @@
         .panel-title
           %h1 Mes derniers bilans
       .panel-body
-        - @bilans.keys.each do |key|
+        - @bilans.keys.each do |date|
           .block
-            .statement= link_to key, root_path
-            .value= "%.2f€" % @bilans[key]
+            .statement= link_to date, statement_path(date)
+            .value= "%.2f€" % @bilans[date]
 
   / = line_chart @bilans
   

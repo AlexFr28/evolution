@@ -16,6 +16,65 @@
 
       .panel-title
       {
+
+        h1
+        {
+          font-size: 2.5rem;
+          // display: inline-block;
+          text-align: center;
+        }
+      }
+    }
+
+    .panel-body
+    {
+      background-color: lighten($tile-color, 25%);
+
+      .date
+      {
+        text-align: center;
+      }
+
+      .name-account
+      {
+        @include make-xs-column(6);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        text-align: right;
+        color: black;
+      }
+
+      .value-account
+      {
+        @include make-xs-column(6);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        color: black;
+      }
+    
+    }
+  }
+}
+
+.show-statements
+{
+  .panel
+  {
+    @include make-xs-column(12);
+    @include make-sm-column(11);
+    @include make-md-column(11);
+    @include make-lg-column(11);
+    font-size: 1.2rem;
+
+    .panel-heading
+    {
+      background-color: $tile-color;
+      color: white;
+
+      .panel-title
+      {
         text-align: center;
 
         h1

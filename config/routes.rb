@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :items_moneys, only: [:index]
   resources :accounts, except: [:show]
-  resources :statements, only: [:new, :create]
+  resources :statements, only: [:new, :create, :show]
 
 end

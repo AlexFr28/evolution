@@ -2,16 +2,16 @@
   .panel
     .panel-heading
       .panel-title
+        = link_to 'retour', items_moneys_path
         %h1 Nouveau relevé
     .panel-body
       = form_tag '/statements' do
-        Date du relevé :
-        = text_field_tag 'date'
+        .date= text_field_tag 'date', 'saisir la date', autofocus: true
         %br
         - @accounts.each do |account|
           .row
-            .col-xs-6
+            .name-account
               = account.name
-            .col-xs-6
+            .value-account
               = number_field_tag account.name, step: 0.01
-        = submit_tag 'Valider le relevé'
+        = submit_tag 'Valider ce relevé'
