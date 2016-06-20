@@ -1,0 +1,12 @@
+.show-statements
+  .panel
+    .panel-heading
+      .panel-title
+        %h1= @date
+    .panel-body
+      - @statements.each do |statement|
+        .row
+          .col-xs-6
+            = statement.account.name
+          .col-xs-6{style: 'text-align: right;'}
+            = "#{statement.amount.round(2)} €"
