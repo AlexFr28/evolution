@@ -14,7 +14,7 @@
 
     .panel-heading
     {
-      background-color: $tile-color;
+      // background-color: $tile-color;
       color: white;
 
       .panel-title
@@ -42,7 +42,7 @@
 
     .panel-body
     {
-      background-color: lighten($tile-color, 25%);
+      // background-color: lighten($tile-color, 25%);
 
       .line
       {
@@ -64,7 +64,7 @@
 
     .panel-heading
     {
-      background-color: $tile-color;
+      // background-color: $tile-color;
       color: white;
 
       .panel-title
@@ -81,7 +81,7 @@
 
     .panel-body
     {
-      background-color: lighten($tile-color, 25%);
+      // background-color: lighten($tile-color, 25%);
 
       .validated
       {

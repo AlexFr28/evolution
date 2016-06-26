@@ -1,8 +1,6 @@
 - if notice
-  .notice( data-alert )
+  .alert.alert-success
     = notice
-    %a.close{ href: '#' } &times;
 - if alert
-  .alert( data-alert )
+  .alert.alert-danger
     = alert
-    %a.close{ href: '#' } &times;

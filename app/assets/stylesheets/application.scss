@@ -19,43 +19,69 @@
 @import "items_moneys";
 @import "accounts";
 @import "statements";
+@import "users";
+
+.row
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
 body
 {
   background-color: $body-color;
-}
 
-.navbar
-{
-  background-color: $navbar-color;
-  color: white;
-  border-radius: 0;
-  .navbar-brand
+  .navigation
   {
+    background-color: $navbar-color;
     color: white;
-  }
-  #navbar-collapse
-  { 
-    background-color: $navbar-color-submenu;
-    .dropdown-toggle
+    border-radius: 0;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+
+    span
     {
-      background-color: $navbar-color-submenu;
+      @include make-xs-column(2);
+      @include make-sm-column(1);
+      @include make-md-column(1);
+      @include make-lg-column(1);
+
       color: white;
+      margin-top: 5px;
     }
-    .dropdown-menu
+
+    .title
     {
-      a
-      {
-        background-color: $navbar-color-submenu;
-        &:hover
-        {
-          background-color: lighten($navbar-color-submenu,10%);
-        }
-      }
-      .divider
-      {
-        background-color: $navbar-color-submenu;
-      }
+      @include make-xs-column(8);
+      @include make-sm-column(10);
+      @include make-md-column(10);
+      @include make-lg-column(10);
+
+      color: white;
+      text-align: center;
     }
+
+    .logout
+    {
+      float: right;
+    }
+
   }
+
+  .notice, .alert
+  {
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+    @include make-sm-column(10);
+    @include make-sm-column-offset(1);
+    @include make-md-column(10);
+    @include make-md-column-offset(1);
+    @include make-lg-column(10);
+    @include make-lg-column-offset(1);
+
+    
+  }
+
 }

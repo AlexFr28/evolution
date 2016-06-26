@@ -24,7 +24,7 @@
       
       position: relative;
       float: right;
-      background-color: $tile-color;
+      // background-color: $tile-color;
       font-size: 20px;
       margin-right: 25px;
       text-align: center;
@@ -50,7 +50,7 @@
 
       .panel-heading
       {
-        background-color: $tile-color;
+        // background-color: $tile-color;
         color: white;
 
         .panel-title
@@ -67,7 +67,7 @@
 
       .panel-body
       {
-        background-color: lighten($tile-color, 25%);
+        // background-color: lighten($tile-color, 25%);
         font-size: 1.5rem;
 
         .block
