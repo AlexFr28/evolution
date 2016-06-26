@@ -43,10 +43,10 @@ body
 
     span
     {
-      @include make-xs-column(2);
-      @include make-sm-column(1);
-      @include make-md-column(1);
-      @include make-lg-column(1);
+      @include make-xs-column(4);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @include make-lg-column(4);
 
       color: white;
       margin-top: 5px;
@@ -54,16 +54,16 @@ body
 
     .title
     {
-      @include make-xs-column(8);
-      @include make-sm-column(10);
-      @include make-md-column(10);
-      @include make-lg-column(10);
+      @include make-xs-column(4);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @include make-lg-column(4);
 
       color: white;
       text-align: center;
     }
 
-    .logout
+    .icon-right
     {
       float: right;
     }

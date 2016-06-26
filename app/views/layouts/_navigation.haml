@@ -1,9 +1,11 @@
 %header
   .navigation.row
-    .home
+    .icon-left
       = link_to root_path do
         %span.glyphicon.glyphicon-home
     .title Evolution
-    .logout
+    .icon-right
+      = link_to root_path do
+        %span.glyphicon.glyphicon-pencil
       = link_to destroy_user_session_path, method: :delete do
         %span.glyphicon.glyphicon-remove
